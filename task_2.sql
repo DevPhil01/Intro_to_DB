@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS books (
     author_id INT NOT NULL,
     price DOUBLE NOT NULL,
     publication_date DATE,
-    FOREIGN KEY (author_id) REFERENCES authors(author_id)
+    FOREIGN KEY (author_id) REFERENCES Authors(author_id)
 );
 
 -- Customers table - created lowercase, but referenced as "Customers" in FK
@@ -41,6 +41,6 @@ CREATE TABLE IF NOT EXISTS order_details (
     order_id INT NOT NULL,
     book_id INT NOT NULL,
     quantity DOUBLE NOT NULL,
-    FOREIGN KEY (order_id) REFERENCES orders(order_id),
-    FOREIGN KEY (book_id) REFERENCES books(book_id)
+    FOREIGN KEY (order_id) REFERENCES Orders(order_id),
+    FOREIGN KEY (book_id) REFERENCES Books(book_id)
 );
